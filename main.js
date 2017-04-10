@@ -16,7 +16,7 @@
             // when it's ready, join if we got a room from the URL
             webrtc.on('readyToCall', function () {
                 // you can name it anything
-                comsole.log("joined room: "+room);
+                console.log("joined room: "+room);
                 if (room) webrtc.joinRoom(room);
             });
 
