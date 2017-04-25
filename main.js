@@ -1,3 +1,8 @@
+           
+           
+          
+           
+           
            // get room name from called URL
             var room = location.search && location.search.split('?')[1];
 
@@ -15,6 +20,7 @@
 
             // when it's ready, join if we got a room from the URL
             webrtc.on('readyToCall', function () {
+                
                 // you can name it anything
                 console.log("joined room: "+room);
                 if (room) webrtc.joinRoom(room);

@@ -4,6 +4,29 @@
         <title>PCE WebRTC Video Call</title>
     </head>
     <body bgcolor="#768EB0">
+
+        <script>
+
+          function changeVideoVisibility(videoButton){
+              
+              var buttonLabel = videoButton.value;
+              var localVideoElement = document.getElementById('localVideo');
+
+                  // show local video                           
+                 if (buttonLabel=="Hide local video"){
+                     videoButton.value = "Show local video";
+                     localVideoElement.style.visibility="hidden";
+                 } 
+                 // hide local video
+                 else {
+                     videoButton.value = "Hide local video";
+                     localVideoElement.style.visibility="visible";
+                 }
+
+            
+                  
+           }
+            </script>
         <!--<h1 id="title" align="center">PCE Video Call</h1>-->
         
         <!--<button id="screenShareButton"></button>-->
@@ -22,6 +45,8 @@
        <tr>
 
            <td>
+        <input type="button" id="localVideoVisibility" value="Hide local video" onclick="changeVideoVisibility(this);"></input>
+
         <!--container for local video-->
         <div class="videoContainer">
             <video id="localVideo" style="height: 300px;width:300px;" oncontextmenu="return false;"></video>
