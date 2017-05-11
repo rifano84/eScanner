@@ -14,7 +14,7 @@
                 remoteVideosEl: 'remotes',
                 // immediately ask for camera access
                 autoRequestMedia: true,
-                debug: false,
+                debug: true,
                 detectSpeakingEvents: true
             });
 
