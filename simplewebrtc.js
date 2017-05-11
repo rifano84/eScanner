@@ -30,7 +30,7 @@ function SimpleWebRTC(opts) {
             },
             localVideo: {
                 autoplay: true,
-                mirror: true,
+                mirror: false,
                 muted: true
             }
         };
