@@ -294,15 +294,14 @@ SimpleWebRTC.prototype.handlePeerStreamAdded = function (peer) {
     // currently called with a small delay because it arrives before
     // the video element is created otherwise (which happens after
     // the async setRemoteDescription-createAnswer)
-    
-    // window.setTimeout(function () {
-    //     if (!self.webrtc.isAudioEnabled()) {
-    //         peer.send('mute', {name: 'audio'});
-    //     }
-    //     if (!self.webrtc.isVideoEnabled()) {
-    //         peer.send('mute', {name: 'video'});
-    //     }
-    // }, 250);
+    window.setTimeout(function () {
+        if (!self.webrtc.isAudioEnabled()) {
+            peer.send('mute', {name: 'audio'});
+        }
+        if (!self.webrtc.isVideoEnabled()) {
+            peer.send('mute', {name: 'video'});
+        }
+    }, 250);
 };
 
 SimpleWebRTC.prototype.handlePeerStreamRemoved = function (peer) {
